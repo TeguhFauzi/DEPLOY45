@@ -1,3 +1,34 @@
+
+// RESPONSIVE NAV
+let barsopen = false
+
+
+function buttonbar() {
+    let floatbar = document.getElementById('floatbar')
+    let openbutt = document.getElementById('openbutt')
+    let closebutt = document.getElementById('closebutt')
+
+    if (barsopen) {
+        floatbar.style.display = 'none'
+        openbutt.style.display = 'block'
+        closebutt.style.display = 'none'
+        barsopen = false
+    } else {
+        floatbar.style.display = 'block'
+        closebutt.style.display = 'block'
+        openbutt.style.display = 'none'
+        barsopen = true
+
+    }
+
+
+}
+
+
+
+
+
+
 let datas = []
 
 function getData(event) {
@@ -8,7 +39,7 @@ function getData(event) {
     let end = new Date(document.getElementById("end").value)
     let description = document.getElementById("description").value
     let form = document.getElementById("form")
- 
+
 
     // GET IMAGE IN FAKEPATH 
     let image = document.getElementById("image").files
@@ -192,10 +223,10 @@ const showData = () => {
 
         </div>
     </div>`
-   
+
 
     }
-    
+
 
 }
 
@@ -234,7 +265,7 @@ const between = (timePost) => {
         return secondBetween + " second ago(s)."
     }
 
-    
+
 }
 
 
@@ -264,11 +295,11 @@ blog.addEventListener('click', (event) => {
 
 
         if (button.textContent === 'delete') {
-         blog.removeChild(cardcontent)
+            blog.removeChild(cardcontent)
         }
-        
+
     }
-  
+
 })
 
 
